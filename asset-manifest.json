@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pablorodrigo52/colorpallete/static/css/main.d5062221.chunk.css",
+    "main.js": "/pablorodrigo52/colorpallete/static/js/main.83cf693e.chunk.js",
+    "main.js.map": "/pablorodrigo52/colorpallete/static/js/main.83cf693e.chunk.js.map",
+    "runtime-main.js": "/pablorodrigo52/colorpallete/static/js/runtime-main.730391c9.js",
+    "runtime-main.js.map": "/pablorodrigo52/colorpallete/static/js/runtime-main.730391c9.js.map",
+    "static/js/2.ee387b63.chunk.js": "/pablorodrigo52/colorpallete/static/js/2.ee387b63.chunk.js",
+    "static/js/2.ee387b63.chunk.js.map": "/pablorodrigo52/colorpallete/static/js/2.ee387b63.chunk.js.map",
+    "index.html": "/pablorodrigo52/colorpallete/index.html",
+    "precache-manifest.d7cc7890757d8ffe81c47d9767818244.js": "/pablorodrigo52/colorpallete/precache-manifest.d7cc7890757d8ffe81c47d9767818244.js",
+    "service-worker.js": "/pablorodrigo52/colorpallete/service-worker.js",
+    "static/css/main.d5062221.chunk.css.map": "/pablorodrigo52/colorpallete/static/css/main.d5062221.chunk.css.map",
+    "static/js/2.ee387b63.chunk.js.LICENSE.txt": "/pablorodrigo52/colorpallete/static/js/2.ee387b63.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.730391c9.js",
+    "static/js/2.ee387b63.chunk.js",
+    "static/css/main.d5062221.chunk.css",
+    "static/js/main.83cf693e.chunk.js"
+  ]
+}
