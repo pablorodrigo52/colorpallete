@@ -24,14 +24,10 @@ class Color extends React.Component {
     _detachColor(e){
         if (e.target.classList.contains('detach')){
             this.state.lastDetachColor.classList.remove('detach');
-            setTimeout(()=>{
-                this.state.lastDetachColor.remove();
-            }, 100);
+            setTimeout(()=>this.state.lastDetachColor.remove(), 100);
         } else {
             const aux = e.target;
-            setTimeout(()=>{
-                aux.classList.add('detach');
-            }, 1);
+            setTimeout(()=>aux.classList.add('detach'), 1);
             e.target.parentNode.insertBefore(aux, e.target);
             this.setState({
                 lastDetachColor: aux
@@ -44,7 +40,10 @@ class Color extends React.Component {
         document.addEventListener('keydown', (e)=>{
             if (e.keyCode == 27) {
                 document.querySelectorAll('.color.detach')
-                    .forEach(el => el.classList.remove('detach'));
+                    .forEach(el => {
+                        el.classList.remove('detach')
+                        setTimeout(()=>el.remove(), 100);
+                    });
                 this.setState({
                     lastDetachColor: null
                 });
