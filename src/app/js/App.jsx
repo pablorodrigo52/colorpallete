@@ -88,7 +88,7 @@ class App extends React.Component {
     } else {
       throw new Error('Cannot copy by button.');
     }
-    if (!copyToClipboard(txt)){
+    if (!copyToClipboard(txt.toLowerCase())){
       alert('cannot copy by button');
     } else {
       let msg = document.createElement('div');
