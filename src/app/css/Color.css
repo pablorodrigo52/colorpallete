@@ -1,5 +1,6 @@
 .color {
     min-width: 4px;
+    transition: .3s all;
 }
 .color.detach {
     cursor: pointer;

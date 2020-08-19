@@ -23,7 +23,10 @@ class Color extends React.Component {
 
     _detachColor(e){
         if (e.target.classList.contains('detach')){
-            this.state.lastDetachColor.remove();
+            this.state.lastDetachColor.classList.remove('detach');
+            setTimeout(()=>{
+                this.state.lastDetachColor.remove();
+            }, 100);
         } else {
             const aux = e.target;
             setTimeout(()=>{
