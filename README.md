@@ -22,3 +22,4 @@ v.0.1.1
 - Select and remain fixed one color;
 - Slider to lightness;
 - Slider to saturation;
+- Export list of colors? (thinking about)
