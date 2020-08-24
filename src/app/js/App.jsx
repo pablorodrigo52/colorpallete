@@ -1,11 +1,13 @@
 import React from 'react';
-import '../css/App.css';
 import Color from './Color.jsx';
 
 import { rgbToHex, copyToClipboard, normalizeToNumber } from './helper/Util.js';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClone } from '@fortawesome/free-solid-svg-icons';
+
+import '../css/App.css';
+import '../css/Responsive.css';
+
 
 class App extends React.Component {
   // um componente pode receber propriedades ex.: <App name="pablo" /> ---> this.props.name ---> returns "pablo"
@@ -37,11 +39,11 @@ class App extends React.Component {
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.hexColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
           </div>
           <section className="config">
-            <div className={this.state.somuchlight ? 'blackfont saturation' : 'saturation'}>
+            <div className={this.state.somuchlight ? 'blackfont' : ''}>
               <div className="title">Saturation</div>
               <input type="range" className="slider" name="saturation" id="saturation" min="0" max="100" value={this.state.saturation} onChange={(e) => this._alterSaturation(e)}/> {this.state.saturation}%
             </div>
-            <div className={this.state.somuchlight ? 'blackfont lightness' : 'lightness'}>
+            <div className={this.state.somuchlight ? 'blackfont' : ''}>
               <div className="title">Lightness</div>
               <input type="range" className="slider" name="lightness" id="lightness" min="0" max="100" value={this.state.lightness} onChange={(e) => this._alterLightness(e)}/> {this.state.lightness}%
             </div>

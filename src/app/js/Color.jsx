@@ -12,8 +12,9 @@ class Color extends React.Component {
     _setBackground(){
         return {
             background: `hsl(${this.props.hue},${this.props.saturation}%,${this.props.lightness}%)`,
-            display: 'inline-block',
-            height: '100vh'
+            // display: 'inline',
+            height: '100vh',
+            // flex: 'auto'
         }
     }
     
