@@ -1,5 +1,5 @@
 .color {
-    min-width: 1px;
+    min-width: 4px;
     transition: .3s all;
 }
 .color.detach {
