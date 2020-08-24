@@ -1,0 +1,14 @@
+@media screen and (max-width: 500px){
+    .panel div svg{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .panel{
+        font-size: 21pt;
+    }
+    .panel div{
+        margin: 14px;
+    }
+}

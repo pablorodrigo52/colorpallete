@@ -1,11 +1,13 @@
 import React from 'react';
-import '../css/App.css';
 import Color from './Color.jsx';
 
 import { rgbToHex, copyToClipboard, normalizeToNumber } from './helper/Util.js';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClone } from '@fortawesome/free-solid-svg-icons';
+
+import '../css/App.css';
+import '../css/Responsive.css';
+
 
 class App extends React.Component {
   // um componente pode receber propriedades ex.: <App name="pablo" /> ---> this.props.name ---> returns "pablo"
@@ -14,11 +16,14 @@ class App extends React.Component {
   constructor(props){
     super(props); // em react, sempre que tiver um construtor de uma classe eu sou obrigado a invocar o super
     this.state = {
+      lastHoveredColor: null,
       panelColor: 'rgba(0, 0, 0, 0.2)',
       rgbColor: 'rgba(0, 0, 0, 0.2)',
       hexColor: '#000000',
       somuchlight: false,
-    }
+      saturation: 100,
+      lightness: 50
+    };
     this._copyIcon = <FontAwesomeIcon icon={faClone} />
   }
 
@@ -33,6 +38,16 @@ class App extends React.Component {
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.rgbColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.hexColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
           </div>
+          <section className="config">
+            <div className={this.state.somuchlight ? 'blackfont' : ''}>
+              <div className="title">Saturation</div>
+              <input type="range" className="slider" name="saturation" id="saturation" min="0" max="100" value={this.state.saturation} onChange={(e) => this._alterSaturation(e)}/> {this.state.saturation}%
+            </div>
+            <div className={this.state.somuchlight ? 'blackfont' : ''}>
+              <div className="title">Lightness</div>
+              <input type="range" className="slider" name="lightness" id="lightness" min="0" max="100" value={this.state.lightness} onChange={(e) => this._alterLightness(e)}/> {this.state.lightness}%
+            </div>
+          </section>
         </section>
       </div>
     )
@@ -45,12 +60,24 @@ class App extends React.Component {
         <Color 
           key={hue} 
           hue={hue} 
-          saturation={100} 
-          lightness={50}
+          saturation={this.state.saturation} 
+          lightness={this.state.lightness}
           mousemove={(e)=> {this._setHoverColor(e)}}
         />);
     }
     return colors;
+  }
+
+  _alterSaturation(e){
+    this.setState({
+      saturation: e.target.value
+    });
+  }
+
+  _alterLightness(e){
+    this.setState({
+      lightness: e.target.value,
+    });
   }
 
   _setHoverColor(e){
@@ -73,6 +100,7 @@ class App extends React.Component {
     }
 
     this.setState({
+      lastHoveredColor: e.target.style.background,
       panelColor: e.target.style.backgroundColor,
       rgbColor: e.target.style.backgroundColor,
       hexColor: rgbToHex(r,g,b)

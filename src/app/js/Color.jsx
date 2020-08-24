@@ -12,8 +12,9 @@ class Color extends React.Component {
     _setBackground(){
         return {
             background: `hsl(${this.props.hue},${this.props.saturation}%,${this.props.lightness}%)`,
-            display: 'inline-block',
-            height: '100vh'
+            // display: 'inline',
+            height: '100vh',
+            // flex: 'auto'
         }
     }
     
@@ -38,7 +39,7 @@ class Color extends React.Component {
 
     _detachAllColors(){
         document.addEventListener('keydown', (e)=>{
-            if (e.keyCode == 27) {
+            if (e.keyCode === 27) {
                 document.querySelectorAll('.color.detach')
                     .forEach(el => {
                         el.classList.remove('detach')
