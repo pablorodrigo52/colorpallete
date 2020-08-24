@@ -38,7 +38,7 @@ class Color extends React.Component {
 
     _detachAllColors(){
         document.addEventListener('keydown', (e)=>{
-            if (e.keyCode == 27) {
+            if (e.keyCode === 27) {
                 document.querySelectorAll('.color.detach')
                     .forEach(el => {
                         el.classList.remove('detach')

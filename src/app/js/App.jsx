@@ -18,6 +18,8 @@ class App extends React.Component {
       rgbColor: 'rgba(0, 0, 0, 0.2)',
       hexColor: '#000000',
       somuchlight: false,
+      saturation: 100,
+      lightness: 50
     }
     this._copyIcon = <FontAwesomeIcon icon={faClone} />
   }
@@ -45,8 +47,8 @@ class App extends React.Component {
         <Color 
           key={hue} 
           hue={hue} 
-          saturation={100} 
-          lightness={50}
+          saturation={this.state.saturation} 
+          lightness={this.state.lightness}
           mousemove={(e)=> {this._setHoverColor(e)}}
         />);
     }
