@@ -85,3 +85,46 @@ body {
   opacity: 1;
   transition: .3s all;
 }
+
+section.config {
+  font-size: 12pt;
+  display: flex;
+}
+
+section.config .title{
+  font-size: 14pt;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: white;
+  outline: none;
+  opacity: 1;
+}
+
+.slider:hover::-webkit-slider-thumb{
+  background: rgb(0, 0, 0);
+  transition: .3s all;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #ffffff;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
