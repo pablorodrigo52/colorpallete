@@ -30,9 +30,9 @@ class App extends React.Component {
   render () {
     return (
       <div className="group">
-        <section className="colors">
+        <ul className="colors">
           {this._renderPallete().map(color => color)}
-        </section>
+        </ul>
         <section className="panel" style={{background: this.state.panelColor}}>
           <div className="codes">
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.rgbColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>

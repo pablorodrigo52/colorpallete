@@ -53,11 +53,11 @@ class Color extends React.Component {
     }
 
     render(){
-        return <div className='color' 
+        return <li className='color' 
             onClick={(e)=>this._detachColor(e)} 
             style={this._setBackground()} 
             onMouseMove={this._onMouseMove}>
-            </div>;
+            </li>;
     }
 }
 
