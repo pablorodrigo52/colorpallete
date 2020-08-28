@@ -2,6 +2,9 @@
     .panel div svg{
         display: none;
     }
+    .color.detach {
+        padding: 3%;
+    }
 }
 
 @media screen and (max-width: 400px){

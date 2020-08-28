@@ -1,12 +1,14 @@
 .color {
-    min-width: 4px;
-    transition: .3s all;
+    /* min-width: 4px; */
+    min-width: 1px;
+    display: inline-block;
+    /* transition: .3s all; */
 }
 .color.detach {
     cursor: pointer;
-    transform: scaleX(1.5);
+    transform: scaleX(1);
     border: 1px solid white;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.384);
-    padding: 3px;
-    transition: .3s all;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 1%;
+    /* transition: padding .1s ease-in-out; */
 }
