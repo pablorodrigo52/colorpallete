@@ -5,6 +5,8 @@ I made this to turn on more easy the job. On ghpages you can acess the program, 
 
 I'm building this with React and trainning _components_, _state_ and _props_.
 
+## Wanna contribute? Make a pull request on dev branch :)
+
 # News
 v.0.1.2
 - You can alter the saturation and lightness from colors.

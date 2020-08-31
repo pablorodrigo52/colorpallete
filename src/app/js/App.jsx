@@ -1,5 +1,6 @@
 import React from 'react';
 import Color from './Color.jsx';
+import Footer from './Footer.jsx';
 
 import { rgbToHex, copyToClipboard, normalizeToNumber } from './helper/Util.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,6 +49,7 @@ class App extends React.Component {
               <input type="range" className="slider" name="lightness" id="lightness" min="0" max="100" value={this.state.lightness} onChange={(e) => this._alterLightness(e)}/> {this.state.lightness}%
             </div>
           </section>
+          <Footer somuchlight={this.state.somuchlight ? 'blackfont' : ''}/>
         </section>
       </div>
     )

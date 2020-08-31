@@ -4,15 +4,8 @@
   padding: 0;
   list-style: none;
 }
-/* body {
-  background: #f6fafb;
-  overflow: hidden;
-} */
 .colors{
   height: 15vh;
-  /* width: 100%;
-  max-width: 100%;
-  min-width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -28,9 +21,6 @@
   text-transform: uppercase;
   font-weight: 300;
   font-size: 30pt;
-  /* max-width: 100%;
-  min-width: 100%;
-  width: 100%; */
 }
 
 .panel div{
