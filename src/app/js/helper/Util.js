@@ -16,4 +16,4 @@ export function copyToClipboard(str){
 
 export function normalizeToNumber(c){
     return Number((c) ? c.replace(")","").replace("(", "").replace(",","") : '');
-  }
+}

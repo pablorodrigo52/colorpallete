@@ -1,0 +1,18 @@
+footer.footer {
+    display: block;
+    font-size: 8pt;
+    position: absolute;
+    text-transform: none;
+    text-align: center;
+    bottom: 15px;
+}
+
+footer.footer .blackfont,
+footer.footer .blackfont a{
+    color: black;
+    transition: .3s ease-in;
+}
+footer.footer .blackfont a:hover{
+    color: blue;
+    transition: .3s ease-in;
+}
