@@ -23,7 +23,10 @@ v.0.1.1
 ## Functions
 - Switch between colors;             OK
 - Copy to clipboard some color;      OK
-- Select and remain fixed one color; OK
+    - RGB
+    - HSL
+    - HEX
+- Select and remain fixed one or more colors; OK
 - Slider to lightness;               OK
 - Slider to saturation;              OK
 - Export list of colors? (thinking about)
