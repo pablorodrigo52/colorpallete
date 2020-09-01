@@ -22,7 +22,7 @@ class App extends React.Component {
       rgbColor: 'rgba(0, 0, 0, 0.2)',
       hexColor: '#000000',
       hueColor: 'hsl(0, 0%, 0%)',
-      somuchlight: false,
+      somuchlight: true,
       saturation: 100,
       lightness: 50
     };
