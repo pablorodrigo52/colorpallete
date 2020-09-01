@@ -53,7 +53,7 @@ class Color extends React.Component {
     }
 
     render(){
-        return <li className='color' 
+        return <li data-id={this.props.hue} className='color' 
             onClick={(e)=>this._detachColor(e)} 
             style={this._setBackground()} 
             onMouseMove={this._onMouseMove}>

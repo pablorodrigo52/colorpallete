@@ -21,6 +21,7 @@ class App extends React.Component {
       panelColor: 'rgba(0, 0, 0, 0.2)',
       rgbColor: 'rgba(0, 0, 0, 0.2)',
       hexColor: '#000000',
+      hueColor: 'hsl(0, 0%, 0%)',
       somuchlight: false,
       saturation: 100,
       lightness: 50
@@ -37,6 +38,7 @@ class App extends React.Component {
         <section className="panel" style={{background: this.state.panelColor}}>
           <div className="codes">
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.rgbColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
+            <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.hueColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
             <div className={this.state.somuchlight ? 'blackfont' : ''}>{this.state.hexColor} <FontAwesomeIcon onClick={this._copy} className={this.state.somuchlight ? 'blackfont' : ''} icon={faClone} /></div>
           </div>
           <section className="config">
@@ -85,6 +87,10 @@ class App extends React.Component {
   _setHoverColor(e){
     const color = e.target.style.backgroundColor.toString();
     let [r, g, b] = [...color.substring(color.indexOf("(")+1).split(",")];
+    
+    let h = normalizeToNumber(e.target.dataset.id);
+    let s = this.state.saturation;
+    let l = this.state.lightness;
 
     r = normalizeToNumber(r);
     g = normalizeToNumber(g);
@@ -105,7 +111,8 @@ class App extends React.Component {
       lastHoveredColor: e.target.style.background,
       panelColor: e.target.style.backgroundColor,
       rgbColor: e.target.style.backgroundColor,
-      hexColor: rgbToHex(r,g,b)
+      hexColor: rgbToHex(r,g,b),
+      hueColor: `hsl(${h}, ${s}%, ${l}%)`
     });
   }
 
